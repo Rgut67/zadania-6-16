@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kod - Zadanie 12</title>
+</head>
+<body>
+
+    <h1>Kod zadania 12</h1>
+
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pl"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Ile sekund&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Ile sekund minęło?&lt;/h1&gt;
+
+    &lt;label&gt;Dzień D1:&lt;/label&gt;
+    &lt;input type="number" id="d1"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Godzina G1:&lt;/label&gt;
+    &lt;input type="number" id="g1"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Dzień D2:&lt;/label&gt;
+    &lt;input type="number" id="d2"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;label&gt;Godzina G2:&lt;/label&gt;
+    &lt;input type="number" id="g2"&gt;
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;button onclick="oblicz()"&gt;Oblicz&lt;/button&gt;
+
+    &lt;div id="wynik"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        function oblicz() {
+            let d1 = Number(document.getElementById("d1").value);
+            let g1 = Number(document.getElementById("g1").value);
+            let d2 = Number(document.getElementById("d2").value);
+            let g2 = Number(document.getElementById("g2").value);
+
+            let czas1 = d1 * 24 + g1;
+            let czas2 = d2 * 24 + g2;
+
+            let roznicaGodzin = Math.abs(czas1 - czas2);
+            let sekundy = roznicaGodzin * 60 * 60;
+
+            document.getElementById("wynik").innerHTML =
+                "Liczba sekund: " + sekundy;
+        }
+    &lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+</body>
+</html>

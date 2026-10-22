@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 12</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Zadanie 12</h1>
+
+    <a href="zadanie12_gut.KOD.html">
+        <button type="button">
+            Przejdź do zadania 12
+        </button>
+    </a>
+
+</body>
+</html>

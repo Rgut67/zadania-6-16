@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 14 - ułamki egipskie</title>
+</head>
+
+<body>
+
+<h2>Temat: Rozkład ułamka egipskiego na trzy ułamki egipskie</h2>
+
+<p>
+    Rozkładamy ułamek według wzoru:
+</p>
+
+<p>
+    1/m = 1/(m+1) + 1/[m(m+1)]
+</p>
+
+<p>
+    Następnie drugi ułamek rozkładamy ponownie na dwa ułamki.
+</p>
+
+<button onclick="zadanie14()">
+    Nazwisko_gut-Zadanie14
+</button>
+
+<button onclick="zadanie14KOD()">
+    Nazwisko_gut-Zadanie14-KOD
+</button>
+
+<div id="wynik"></div>
+
+<script>
+
+function zadanie14() {
+
+    let m_kow = Number(prompt("Podaj wartość m_kow:"));
+
+    if (m_kow <= 0 || !Number.isInteger(m_kow)) {
+        document.write("Podaj liczbę naturalną większą od 0.");
+        return;
+    }
+
+    // Pierwszy rozkład:
+    // 1/m = 1/(m+1) + 1/[m(m+1)]
+
+    let mianownik1 = m_kow + 1;
+
+    // Rozkład drugiego ułamka:
+    // 1/[m(m+1)] =
+    // 1/[m(m+1)+1] +
+    // 1/[m(m+1)(m(m+1)+1)]
+
+    let mianownik2 = m_kow * (m_kow + 1) + 1;
+
+    let mianownik3 =
+        m_kow * (m_kow + 1) * mianownik2;
+
+    document.write("<h2>Otrzymujemy:</h2>");
+
+    document.write(
+        "1/" + m_kow +
+        " = 1/" + mianownik1 +
+        " + 1/" + mianownik2 +
+        " + 1/" + mianownik3
+    );
+}
+
+
+function zadanie14KOD() {
+
+    let m_kow = Number(prompt("Podaj wartość m_kow:"));
+
+    let mianownik1 = m_kow + 1;
+    let mianownik2 = m_kow * (m_kow + 1) + 1;
+    let mianownik3 = m_kow * (m_kow + 1) * mianownik2;
+
+    document.write("<h2>Rozkład ułamka egipskiego</h2>");
+
+    document.write(
+        "Dla m = " + m_kow + "<br><br>"
+    );
+
+    document.write(
+        "1/" + m_kow +
+        " = 1/" + mianownik1 +
+        " + 1/" + mianownik2 +
+        " + 1/" + mianownik3
+    );
+}
+
+</script>
+
+</body>
+</html>

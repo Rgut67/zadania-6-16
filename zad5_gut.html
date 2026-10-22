@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie 5 - Gutkowski</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+    }
+    h1 {
+        color: red;
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin: 6px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h1>wykonał: Radosław Gutkowski mój numer w dzienniku 4, czyli<br>
+mam układ [(4) mod 4=0] układ 4</h1>
+
+<div>
+    <button onclick="WinOpen_gutkowski_1()">grafika1</button>
+    <button onclick="WinOpen_gutkowski_2()">grafika2</button>
+    <button onclick="WinOpen_gutkowski_3()">grafika3</button>
+    <button onclick="WinOpen_gutkowski_4()">grafika4</button>
+</div>
+
+<br><br>
+<button onclick="window.close()">zamknij okno</button>
+
+<script>
+
+// zmienne przechowujące referencje do otwartych okien
+var okno1, okno2, okno3, okno4;
+
+// Układ 4: okna ustawione obok siebie w jednym rzędzie, bez nakładania się
+
+function WinOpen_gutkowski_1() {
+    okno1 = window.open('', 'okno1', 'width=180,height=270,left=0,top=350');
+    okno1.document.write(
+        '<html><head><title>grafika1</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://picsum.photos/id/219/150/150" width="150" alt="grafika1"><br>' +
+        '<p style="color:blue;font-weight:bold;">KOT SIĘ ZGUBIŁ W LESIE</p>' +
+        '<button onclick="window.opener.okno_zamknij_gutkowski_1()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_gutkowski_1() {
+    if (okno1 && !okno1.closed) okno1.close();
+}
+
+function WinOpen_gutkowski_2() {
+    okno2 = window.open('', 'okno2', 'width=180,height=270,left=200,top=350');
+    okno2.document.write(
+        '<html><head><title>grafika2</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://picsum.photos/id/1025/150/150" width="150" alt="grafika2"><br>' +
+        '<p style="color:green;font-weight:bold;">PIES RUSZA MU NA RATUNEK</p>' +
+        '<button onclick="window.opener.okno_zamknij_gutkowski_2()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_gutkowski_2() {
+    if (okno2 && !okno2.closed) okno2.close();
+}
+
+function WinOpen_gutkowski_3() {
+    okno3 = window.open('', 'okno3', 'width=180,height=270,left=400,top=350');
+    okno3.document.write(
+        '<html><head><title>grafika3</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://picsum.photos/id/40/150/150" width="150" alt="grafika3"><br>' +
+        '<p style="color:purple;font-weight:bold;">RAZEM ZNAJDUJĄ DROGĘ DO DOMU</p>' +
+        '<button onclick="window.opener.okno_zamknij_gutkowski_3()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_gutkowski_3() {
+    if (okno3 && !okno3.closed) okno3.close();
+}
+
+function WinOpen_gutkowski_4() {
+    okno4 = window.open('', 'okno4', 'width=180,height=270,left=600,top=350');
+    okno4.document.write(
+        '<html><head><title>grafika4</title></head>' +
+        '<body style="text-align:center;font-family:Arial;">' +
+        '<img src="https://picsum.photos/id/1074/150/150" width="150" alt="grafika4"><br>' +
+        '<p style="color:darkorange;font-weight:bold;">SZCZĘŚLIWY POWRÓT DO DOMU</p>' +
+        '<button onclick="window.opener.okno_zamknij_gutkowski_4()">zamknij okno</button>' +
+        '</body></html>'
+    );
+}
+
+function okno_zamknij_gutkowski_4() {
+    if (okno4 && !okno4.closed) okno4.close();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 15</title>
+</head>
+
+<body>
+
+<h2>Temat: Rozkład ułamka egipskiego na dwa takie same ułamki egipskie</h2>
+
+<button onclick="zadanie15()">
+    Nazwisko_gut-Zadanie15
+</button>
+
+<button onclick="zadanie15KOD()">
+    Nazwisko_gut-Zadanie15-KOD
+</button>
+
+<script>
+
+function zadanie15() {
+
+    let m_kow = Number(prompt("Podaj wartość m:"));
+
+    if (m_kow <= 0 || !Number.isInteger(m_kow)) {
+        document.write("Podaj liczbę naturalną większą od 0.");
+        return;
+    }
+
+    let mianownik = 2 * m_kow;
+
+    document.write("<h2>Otrzymujemy:</h2>");
+
+    document.write(
+        "1/" + m_kow +
+        " = 1/" + mianownik +
+        " + 1/" + mianownik
+    );
+}
+
+
+function zadanie15KOD() {
+
+    let m_kow = Number(prompt("Podaj wartość m:"));
+
+    let mianownik = 2 * m_kow;
+
+    document.write("<h2>Rozkład ułamka egipskiego</h2>");
+
+    document.write(
+        "1/" + m_kow +
+        " = 1/" + mianownik +
+        " + 1/" + mianownik
+    );
+}
+
+</script>
+
+</body>
+</html>

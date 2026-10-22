@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 14</title>
+</head>
+
+<body>
+
+<script>
+    let m_gut = Number(prompt("Podaj wartość m_gut:"));
+
+ 
+
+    let mianownik1 = m_gut + 1;
+    let mianownik2 = m_gut * (m_gut + 1) + 1;
+    let mianownik3 = m_gut * (m_gut + 1) * mianownik2;
+
+    document.write("<h2>Rozkład ułamka egipskiego</h2>");
+
+    document.write(
+        "Dla m = " + m_gut + ":<br><br>" +
+        "1/" + m_kow + " = " +
+        "1/" + mianownik1 + " + " +
+        "1/" + mianownik2 + " + " +
+        "1/" + mianownik3
+    );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 16</title>
+</head>
+
+<body>
+
+<h2>Temat: Sterowanie wydrukami</h2>
+
+<button onclick="zadanie16()">
+    Nazwisko_gut-Zadanie16
+</button>
+
+<button onclick="zadanie16KOD()">
+    Nazwisko_gut-Zadanie16-KOD
+</button>
+
+<script>
+
+function zadanie16() {
+
+    let A = Number(prompt("Podaj pierwszą liczbę:"));
+    let B = Number(prompt("Podaj drugą liczbę:"));
+
+    let A3 = A * A * A;
+    let A2B = 3 * A * A * B;
+    let AB2 = 3 * A * B * B;
+    let B3 = B * B * B;
+
+    let wynik = A3 + A2B + AB2 + B3;
+
+    document.write("<h2>Wynik</h2>");
+
+    document.write("A = " + A + "<br>");
+    document.write("B = " + B + "<br><br>");
+
+    document.write(
+        "(" + A + " + " + B + ")³ = " +
+        A3 + " + " +
+        A2B + " + " +
+        AB2 + " + " +
+        B3 +
+        " = " + wynik
+    );
+}
+
+
+function zadanie16KOD() {
+
+    let A = Number(prompt("Podaj pierwszą liczbę:"));
+    let B = Number(prompt("Podaj drugą liczbę:"));
+
+    let wynik =
+        A * A * A +
+        3 * A * A * B +
+        3 * A * B * B +
+        B * B * B;
+
+    document.write(
+        "(A + B)³ = A³ + 3A²B + 3AB² + B³<br><br>"
+    );
+
+    document.write(
+        "(" + A + " + " + B + ")³ = " + wynik
+    );
+}
+
+</script>
+
+</body>
+</html>
